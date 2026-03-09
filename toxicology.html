@@ -1,0 +1,63 @@
+<section id="toxicology">
+  <div class="tox-bg"></div>
+  <div class="forensic-bg">
+    <!-- Biohazard-style rings -->
+    <svg style="position:absolute;top:10%;left:2%;width:160px;opacity:0.04;" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="45" fill="none" stroke="white" stroke-width="1.5"/>
+      <circle cx="50" cy="50" r="35" fill="none" stroke="white" stroke-width="1"/>
+      <circle cx="50" cy="50" r="25" fill="none" stroke="white" stroke-width="0.8"/>
+      <circle cx="50" cy="50" r="8" fill="white" opacity="0.4"/>
+      <line x1="50" y1="5" x2="50" y2="42" stroke="white" stroke-width="1"/>
+      <line x1="5" y1="50" x2="42" y2="50" stroke="white" stroke-width="1"/>
+      <line x1="50" y1="58" x2="50" y2="95" stroke="white" stroke-width="1"/>
+      <line x1="58" y1="50" x2="95" y2="50" stroke="white" stroke-width="1"/>
+    </svg>
+    <!-- Red blood spatter top right -->
+    <svg style="position:absolute;top:5%;right:5%;width:200px;opacity:0.08;" viewBox="0 0 200 200">
+      <circle cx="100" cy="70" r="25" fill="#cc0000"/>
+      <circle cx="145" cy="45" r="11" fill="#cc0000"/>
+      <circle cx="65" cy="95" r="8" fill="#cc0000"/>
+      <ellipse cx="165" cy="90" rx="6" ry="12" fill="#cc0000" transform="rotate(-35 165 90)"/>
+      <circle cx="85" cy="40" r="5" fill="#cc0000"/>
+      <circle cx="160" cy="120" r="4" fill="#cc0000"/>
+      <circle cx="50" cy="55" r="3" fill="#cc0000"/>
+    </svg>
+    <!-- Fingerprint right -->
+    <div class="fp" style="bottom:5%;right:3%;width:150px;transform:rotate(-12deg);">
+      <svg viewBox="0 0 100 100"><ellipse cx="50" cy="50" rx="8" ry="11" fill="none" stroke="white" stroke-width="1.5"/><ellipse cx="50" cy="50" rx="17" ry="22" fill="none" stroke="white" stroke-width="1.2"/><ellipse cx="50" cy="50" rx="26" ry="33" fill="none" stroke="white" stroke-width="1.1"/><ellipse cx="50" cy="50" rx="35" ry="43" fill="none" stroke="white" stroke-width="1"/><ellipse cx="50" cy="50" rx="44" ry="49" fill="none" stroke="white" stroke-width="0.9"/></svg>
+    </div>
+    <div class="cone" style="bottom:15%;left:45%;">
+      <svg width="36" height="46" viewBox="0 0 50 60"><polygon points="25,0 50,55 0,55" fill="#ffdd00" opacity="0.7"/><rect x="0" y="55" width="50" height="5" fill="#ffdd00" opacity="0.5"/><text x="19" y="49" font-size="10" fill="black" font-family="monospace" opacity="0.6">☠</text></svg>
+    </div>
+  </div>
+  <div class="section-inner tox-container" style="position:relative;z-index:1;">
+    <div style="text-align:right;margin-bottom:-20px;"><span class="handwritten" style="color:rgba(204,0,0,0.6);font-size:1.5rem;">Danger — Handle with Care</span></div>
+    <div class="tox-header">
+      <div class="tox-skull">☠️</div>
+      <div>
+        <div class="section-label" style="margin-bottom:8px;">Interactive Feature</div>
+        <h2 class="section-title">Toxicology <span class="gold-text">Corner</span></h2>
+        <p style="color:var(--text-muted); font-style:italic; margin-top:4px;">Guess the Poison — from clinical clues to culprit</p>
+      </div>
+    </div>
+    <div class="tox-score" id="toxScore">SCORE: 0 / 0</div>
+    <div class="tox-game-area">
+      <div class="tox-clue-box">
+        <div class="tox-clue-title">⚕️ Clinical Clues</div>
+        <div id="toxClues"></div>
+      </div>
+      <div class="tox-answer-area">
+        <h3 style="font-family:'Special Elite',monospace; color:#cc0000; margin-bottom:20px; font-size:1rem; letter-spacing:3px;">IDENTIFY THE POISON</h3>
+        <div class="tox-options" id="toxOpts"></div>
+        <div class="tox-result">
+          <div class="tox-result-text" id="toxResultText"></div>
+          <div class="tox-result-explain" id="toxResultExplain"></div>
+        </div>
+        <button class="tox-next-btn" id="toxNextBtn" onclick="loadToxQuestion()">NEXT POISON →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="white-rule"></div>
+<!-- JOIN -->
